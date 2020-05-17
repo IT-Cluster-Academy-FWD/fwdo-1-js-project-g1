@@ -6,6 +6,4 @@ var color = prompt('Ваш улюблений колір?');
 var canVote = age >= 18 ? 'вже дозволено' : 'ще не дозволено';
 
 var message = 'Привіт ' + firstName + ', я бачу вам ' + age + ' років, як я бачу вам  ' + canVote + ' голосувати. Ви працюєте ' + ocupation + '. Я теж люблю ' + color + ' колір. ' + actor + ' теж один з моїх улюблених акторів.';
-
-
 document.write(message);
