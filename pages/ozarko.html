@@ -6,7 +6,38 @@
   <title>Ozarko</title>
 </head>
 <body>
-  
+  <form id="choose-car-form" action="#">
+    <label for="color">Choose your color</label>
+    <select name="carColor" id="color">
+      <option value="green">Green color</option>
+      <option value="red">Red color</option>
+      <option value="pink">Fushsia color</option>
+    </select>
+    <br><br>
+    <label for="car-brand">Choose your future car</label>
+    <select name="carBrand" id="car-brand">
+      <option value="vaz">VAZ 2101</option>
+      <option value="zaz">Zaz Lanos Cargo</option>
+      <option value="tesla">Cybertruck</option>
+    </select>
+    <br><br>
+    <label for="car-date">Choose the year of your car</label>
+    <select name="carDate" id="car-date">
+      <option value="old">1970 year</option>
+      <option value="present">2020 year</option>
+      <option value="future">2075 year</option>
+    </select>
+    <br><br>
+    <button class="car-submit-button" type="submit" value="Choose">Choose your Car!</button>
+  </form>
+
+  <ul class="car-list">
+    <li class="car-list-item">I am first</li>
+  </ul>
+  <ul class="greenCarList"></ul>
+  <ul class="redCarList"></ul>
+  <ul class="pinkCarList"></ul>
+  <button id="car-sort-button">Sort Car List</button>
   <script src="../js/ozarko.js"></script>
 </body>
 </html>

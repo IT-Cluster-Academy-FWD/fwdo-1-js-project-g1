@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forma</title>
+  <link rel="stylesheet" href="../css/olya.css">
+</head>
+<body>
+  <form id="selected-items-form">
+    <select name="chooseCar" id="choose-car">
+      <option value="bmw">BMW</option>
+      <option value="opel">Opel</option>
+      <option value="nissan">Nissan</option>
+    </select>
+    <select name="chooseColor" id="choose-color">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <select name="chooseYear" id="choose-year">
+      <option value="1990">1990</option>
+      <option value="2010">2010</option>
+      <option value="2020">2020</option>
+    </select>
+    <br>
+    <input type="submit" value="Ok" id="submit-button">
+  </form>
+  <ul class="list-of-cars"></ul>
+  <br>
+  <ul class="brand-list" ></ul>
+  <ul class="color-list" ></ul>
+  <ul class="year-list" ></ul>
+  <button class="sort-button">SORT</button>
+  <script src="../js/olya.js"></script>
+</body>
+</html>
