@@ -14,7 +14,30 @@ $car.addEventListener('submit', (event) => {
     brand: $carBrand.value,
     color: $carColor.value,
     year: $carYear.value,
-  }
+  };
   $carList.innerHTML += '<li>' + newCar.brand + '</li>';
+  listOfCars.push(newCar);
+  listOfCars.sort(function (firstCar, secondCar) {
+    return firstCar.year - secondCar.year;
+  });
+  if (listOfCars.length >= 6) {
+    sortAllCars.disabled = false;
+  }
 });
 
+const $blackList = document.querySelector('.black-list');
+const $redList = document.querySelector('.red-list');
+const $greenList = document.querySelector('.green-list');
+sortAllCars.addEventListener('click', () => {
+  for (const newCar of listOfCars) {
+    if (newCar.color === 'black') {
+      $blackList.innerHTML += '<li>' + newCar.year + ' ' + newCar.brand + ' ' + newCar.color + '</li>';
+    } else if (newCar.color === 'red') {
+      $redList.innerHTML += '<li>' + newCar.year + ' ' + newCar.brand + ' ' + newCar.color + '</li>';
+      $redList.style.color = '#ff0000';
+    } else if (newCar.color === 'green') {
+      $greenList.innerHTML += '<li>' + newCar.year + ' ' + newCar.brand + ' ' + newCar.color + '</li>';
+      $greenList.style.color = '#003300';
+    }
+  }
+});
