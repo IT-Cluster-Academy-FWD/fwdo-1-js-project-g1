@@ -16,18 +16,21 @@ $car.addEventListener("submit", (event) => {
   };
   $listOfCars.innerHTML += '<li>' + car.brand + '</li>';
   cars.push(car);
+  cars.sort(function (firstCar, secondCar) {
+    return firstCar.year - secondCar.year;
+  });
   if (cars.length > 6) {
     $sortButton.disabled = false;
   }
 });
 
-const $redList = document.querySelector(".brand-list");
-const $greenList = document.querySelector(".color-list");
-const $yellowList = document.querySelector(".year-list");
+const $redList = document.querySelector(".red-list");
+const $greenList = document.querySelector(".green-list");
+const $yellowList = document.querySelector(".yellow-list");
 $sortButton.addEventListener('click', () => {
   for (const car of cars) {
     if (car.color === 'red') {
-      $redList.innerHTML += '<li>' + car.brand + ' ' + car.year + ' ' + car.color + '</li>' // -> <li>BMW, Read, 2001</li>
+      $redList.innerHTML += '<li>' + car.brand + ' ' + car.year + ' ' + car.color + '</li>'
     } else if (car.color === 'green') {
       $greenList.innerHTML += '<li>' + car.brand + ' ' + car.year + ' ' + car.color + '</li>';
     } else if (car.color === 'yellow') {
@@ -35,4 +38,3 @@ $sortButton.addEventListener('click', () => {
     }
   }
 });
-
